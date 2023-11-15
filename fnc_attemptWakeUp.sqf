@@ -2,9 +2,10 @@
 //Feel free to do whatever you want with this. Learn from it and share it. 
 //Credit to Lacey of 42 Commando for tons of assistance
 
-params ["_wakerUpper", "_sleepingPerson"];
+_wakerUpper = this select 0;
+_sleepingPerson = this select 1;
 
-hint "Attempting wake-up";
+hint "Starting";
 
 //If the sleeping person is in a medical facility
 if ([_sleepingPerson] call ace_medical_treatment_fnc_isInMedicalFacility) then {

@@ -17,9 +17,9 @@ this addEventHandler ["HitPart", {
 
             _thisSoldier = (_x select 0);
  
-            [_thisSoldier, true] call ace_medical_status_fnc_setUnconsciousState ;
-
-            _thisSoldier addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _thisSoldier], 1.5, true, true, "", "true", 5];
+            [_thisSoldier, true] call ace_medical_status_fnc_setUnconsciousState;
+            
+            _thisSoldier addAction ["Wake Up (Requires medic and medical facility)", "scripts\MILES\fnc_attemptWakeUp.sqf", [player, _thisSoldier], 1.5, true, false, "", "true", 5];
         }; 
  
     } forEach _this;  
